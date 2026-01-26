@@ -5,6 +5,7 @@ export default defineConfig({
     title: "無人問津 の 言",
     description: "A VitePress Site",
     srcDir: './src',
+    publicDir: './public', // 替换为静态资源目录
     base: '/', // 替换为你的仓库名
 
     head: [ // 新增 head 配置
