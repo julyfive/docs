@@ -23,14 +23,70 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         siteTitle: '無言 の coder', // siteTitle: false,
         logo: '/avatar.png',
-
+        // editLink: {
+        //     pattern: 'https://github.com/julyfive/vitepress',
+        //     text: 'Edit this page on GitLab'
+        // },
+        lastUpdated: {
+            text: 'Updated Date',
+            // 你可以自定义格式化函数
+            formatOptions: {
+                text: 'Updated Date',
+                // 使用 formatOptions 尝试接近格式
+                formatOptions: {
+                    dateStyle: 'short',
+                    timeStyle: 'medium',
+                    forceLocale: true
+                }
+            }
+        },
         nav: [
             {text: 'Home', link: '/'},
-            {text: '前端', link: '/frontend/', activeMatch: '/frontend/'},
-            {text: '后端', link: '/backend/', activeMatch: '/backend/'},
+            {
+                text: '前端', activeMatch: '/frontend/', // 去掉 link: '/frontend/',
+                items: [
+                    {
+                        // 该部分的标题
+                        // text: '基础',
+                        items: [
+                            {
+                                text: 'html', link: '/frontend/html/',
+                            },
+                            {text: 'css', link: '/frontend/css/'},
+                            {text: 'js', link: '/frontend/js/'}
+                        ]
+                    }, {
+                        // 该部分的标题
+                        // text: '框架',
+                        items: [
+                            {text: 'react', link: '/frontend/react'},
+                            {text: 'vue', link: '/frontend/vue'},
+                            {text: 'svelte', link: '/frontend/svelte'}
+                        ]
+                    }
+                ]
+            },
+            {
+                text: '后端', activeMatch: '/backend/', //去掉  link: '/backend/',
+                items: [
+                    {
+                        // 该部分的标题
+                        text: 'Node',
+                        items: [
+                            {text: 'express', link: '/backend/express'},
+                            {text: 'nest', link: '/backend/nest'},
+                        ]
+                    }, {
+                        // 该部分的标题
+                        text: 'Rust',
+                        items: []
+                    }
+                ]
+            },
             {text: '案例', link: '/examples/', activeMatch: '/examples/'},
             {text: '五彩世界', link: '/multicolored/', activeMatch: '/multicolored/'}
         ],
+
 
         sidebar: {
             // 当路径以 /markdown-examples 开头时显示的侧边栏
@@ -45,8 +101,7 @@ export default defineConfig({
                     }
                 ],
             // 当路径以 /multicolored/ 开头时显示的侧边栏
-            '/multicolored/':
-                [
+            '/multicolored/': [
                     {
                         text: '五彩项目',
                         items: [
@@ -54,7 +109,11 @@ export default defineConfig({
                             {text: '项目 B', link: '/multicolored/project-b'}
                         ]
                     }
-                ]
+                ],
+            '/frontend/html/':[
+                {text: 'HTML', link: '/frontend/html/'},
+                {text: 'HTML5', link: '/frontend/html/h5.md'},
+            ]
         }
         ,
 

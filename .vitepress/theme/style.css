@@ -136,3 +136,17 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+
+
+/* 针对下拉浮层的类名进行平移 */
+.VPFlyout .menu {
+  /* X轴移动 -10px, Y轴移动 0 */
+  transform: translateX(30px) !important;
+}
+
+.VPContentDocFooter .last-updated {
+  text-align: right;
+}
+.VPDocFooter .edit-info .last-updated{
+  margin-left: auto;
+}
