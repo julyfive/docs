@@ -15,7 +15,7 @@ hero:
     - theme: brand
       text: Welcome!
       target: _self
-      link: /markdown-examples
+      link: /frontend/
     - theme: alt
       text: API Examples
       link: /api-examples

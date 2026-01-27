@@ -5,7 +5,6 @@ export default defineConfig({
     title: "無人問津 の 言",
     description: "A VitePress Site",
     srcDir: './src',
-    publicDir: './public', // 替换为静态资源目录
     base: '/', // 替换为你的仓库名
 
     head: [ // 新增 head 配置
@@ -20,26 +19,46 @@ export default defineConfig({
 
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'Examples', link: '/markdown-examples'},
-            {text: '五彩世界', link: '/markdown-examples'}
+            {text: '前端', link: '/frontend/', activeMatch: '/frontend/'},
+            {text: '后端', link: '/backend/', activeMatch: '/backend/'},
+            {text: '案例', link: '/examples/', activeMatch: '/examples/'},
+            {text: '五彩世界', link: '/multicolored/', activeMatch: '/multicolored/'}
         ],
 
-        sidebar: [
-            {
-                text: 'Examples',
-                items: [
-                    {text: 'Markdown Examples', link: '/markdown-examples'},
-                    {text: 'Runtime API Examples', link: '/api-examples'}
+        sidebar: {
+            // 当路径以 /markdown-examples 开头时显示的侧边栏
+            '/examples/':
+                [
+                    {
+                        text: '案例详情',
+                        items: [
+                            {text: 'Markdown Examples', link: '/examples/markdown-examples'},
+                            {text: 'Runtime API Examples', link: '/examples/api-examples'}
+                        ]
+                    }
+                ],
+            // 当路径以 /multicolored/ 开头时显示的侧边栏
+            '/multicolored/':
+                [
+                    {
+                        text: '五彩项目',
+                        items: [
+                            {text: '项目 A', link: '/multicolored/project-a'},
+                            {text: '项目 B', link: '/multicolored/project-b'}
+                        ]
+                    }
                 ]
-            }
-        ],
+        }
+        ,
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/julyfive/vitepress'}
         ],
-        footer: {
-            message: 'Released under the MIT License.',
-            copyright: 'Copyright © 2026 coder s'
-        }
+        footer:
+            {
+                message: 'Released under the MIT License.',
+                copyright:
+                    'Copyright © 2026 coder s'
+            }
     }
 })

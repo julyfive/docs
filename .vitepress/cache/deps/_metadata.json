@@ -1,25 +1,37 @@
 {
-  "hash": "b6bf6f32",
-  "configHash": "bb88645f",
-  "lockfileHash": "f6b6da8f",
-  "browserHash": "46760608",
+  "hash": "acd5a9af",
+  "configHash": "0a7f53be",
+  "lockfileHash": "fb62c875",
+  "browserHash": "9c6cd94c",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "8d03fc23",
+      "fileHash": "97b0baac",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "28f94589",
+      "fileHash": "d16f7806",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "7318a50c",
+      "fileHash": "6f296022",
+      "needsInterop": false
+    },
+    "tsparticles": {
+      "src": "../../../node_modules/tsparticles/browser/index.js",
+      "file": "tsparticles.js",
+      "fileHash": "4d7155bd",
+      "needsInterop": false
+    },
+    "tsparticles-engine": {
+      "src": "../../../node_modules/tsparticles-engine/esm/index.js",
+      "file": "tsparticles-engine.js",
+      "fileHash": "fb758cea",
       "needsInterop": false
     }
   },
