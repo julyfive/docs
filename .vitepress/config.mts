@@ -9,8 +9,15 @@ export default defineConfig({
 
     head: [ // 新增 head 配置
         // 設置標籤頁圖標
-        ['link', {rel: 'icon', href: '/avatar.png'}]
+        ['link', {rel: 'icon', href: '/avatar.png'}],
         // 如果你的文件是 favicon.ico，就把 href 改成 '/favicon.ico'
+        [
+            'meta',
+            {
+                name: 'viewport',
+                content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+            }
+        ]
     ],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
