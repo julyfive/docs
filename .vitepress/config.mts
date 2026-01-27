@@ -49,9 +49,7 @@ export default defineConfig({
                         // 该部分的标题
                         // text: '基础',
                         items: [
-                            {
-                                text: 'html', link: '/frontend/html/',
-                            },
+                            {text: 'html', link: '/frontend/html/'},
                             {text: 'css', link: '/frontend/css/'},
                             {text: 'js', link: '/frontend/js/'}
                         ]
@@ -71,14 +69,18 @@ export default defineConfig({
                 items: [
                     {
                         // 该部分的标题
-                        text: 'Node',
+                        // text: 'Node',
                         items: [
-                            {text: 'express', link: '/backend/express'},
-                            {text: 'nest', link: '/backend/nest'},
+                            {text: 'node', link: '/backend/node/'},
                         ]
                     }, {
-                        // 该部分的标题
-                        text: 'Rust',
+                        // text: 'Node框架',
+                        items: [
+                            {text: 'express', link: '/backend/express/'},
+                            {text: 'nest', link: '/backend/nest/'},
+                        ]
+                    }, {
+                        // text: 'Rust',
                         items: []
                     }
                 ]
@@ -102,17 +104,17 @@ export default defineConfig({
                 ],
             // 当路径以 /multicolored/ 开头时显示的侧边栏
             '/multicolored/': [
-                    {
-                        text: '五彩项目',
-                        items: [
-                            {text: '项目 A', link: '/multicolored/project-a'},
-                            {text: '项目 B', link: '/multicolored/project-b'}
-                        ]
-                    }
-                ],
-            '/frontend/html/':[
-                {text: 'HTML', link: '/frontend/html/'},
-                {text: 'HTML5', link: '/frontend/html/h5.md'},
+                {
+                    text: '五彩项目',
+                    items: [
+                        {text: '项目 A', link: '/multicolored/project-a'},
+                        {text: '项目 B', link: '/multicolored/project-b'}
+                    ]
+                }
+            ],
+            '/frontend/html/': [
+                // {text: 'html', link: '/frontend/html/'},
+                {text: 'html标签', link: '/frontend/html/h5.md'},
             ]
         }
         ,
