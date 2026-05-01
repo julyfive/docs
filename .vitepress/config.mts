@@ -23,6 +23,9 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         siteTitle: '無言 の coder', // siteTitle: false,
         logo: '/avatar.png',
+        outline: {
+            label: '目录'
+        },
         // editLink: {
         //     pattern: 'https://github.com/julyfive/vitepress',
         //     text: 'Edit this page on GitLab'
@@ -31,17 +34,12 @@ export default defineConfig({
             text: 'Updated Date',
             // 你可以自定义格式化函数
             formatOptions: {
-                text: 'Updated Date',
-                // 使用 formatOptions 尝试接近格式
-                formatOptions: {
-                    dateStyle: 'short',
-                    timeStyle: 'medium',
-                    forceLocale: true
-                }
+                forceLocale: true,
             }
         },
         nav: [
             {text: 'Home', link: '/'},
+            {text: '琐碎', link: '/knowledge/theme', activeMatch: '/knowledge/'},
             {
                 text: '前端', activeMatch: '/frontend/', // 去掉 link: '/frontend/',
                 items: [
@@ -58,6 +56,7 @@ export default defineConfig({
                         // text: '框架',
                         items: [
                             {text: 'react', link: '/frontend/react'},
+                            {text: 'next', link: '/frontend/next'},
                             {text: 'vue', link: '/frontend/vue'},
                             {text: 'svelte', link: '/frontend/svelte'}
                         ]
@@ -85,20 +84,18 @@ export default defineConfig({
                     }
                 ]
             },
-            {text: '案例', link: '/examples/', activeMatch: '/examples/'},
             {text: '五彩世界', link: '/multicolored/', activeMatch: '/multicolored/'}
         ],
 
 
         sidebar: {
-            // 当路径以 /markdown-examples 开头时显示的侧边栏
-            '/examples/':
+            // 当路径以 /markdown-knowledge 开头时显示的侧边栏
+            '/knowledge/':
                 [
                     {
-                        text: '案例详情',
+                        text: '知识点',
                         items: [
-                            {text: 'Markdown Examples', link: '/examples/markdown-examples'},
-                            {text: 'Runtime API Examples', link: '/examples/api-examples'}
+                            {text: '主题切换', link: '/knowledge/theme'},
                         ]
                     }
                 ],

@@ -13,12 +13,12 @@ hero:
     height: 300
   actions:
     - theme: brand
-      text: Welcome!
+      text: 开始吧!
       target: _self
       link: /frontend/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 琐碎
+      link: /knowledge
 
 features:
   - title: Feature A
