@@ -41,24 +41,25 @@ export default defineConfig({
             {text: 'Home', link: '/'},
             {text: '琐碎', link: '/knowledge/theme', activeMatch: '/knowledge/'},
             {
+                text: 'Rust', link: '/rust/', activeMatch: '/rust'
+            },
+            {
                 text: '前端', activeMatch: '/frontend/', // 去掉 link: '/frontend/',
                 items: [
                     {
                         // 该部分的标题
                         // text: '基础',
                         items: [
-                            {text: 'html', link: '/frontend/html/'},
-                            {text: 'css', link: '/frontend/css/'},
-                            {text: 'js', link: '/frontend/js/'}
+                            {text: '三剑客', link: '/frontend/base/'},
                         ]
                     }, {
                         // 该部分的标题
                         // text: '框架',
                         items: [
-                            {text: 'react', link: '/frontend/react'},
-                            {text: 'next', link: '/frontend/next'},
-                            {text: 'vue', link: '/frontend/vue'},
-                            {text: 'svelte', link: '/frontend/svelte'}
+                            {text: 'React', link: '/frontend/react'},
+                            {text: 'Next', link: '/frontend/next'},
+                            {text: 'Vue', link: '/frontend/vue'},
+                            {text: 'Svelte', link: '/frontend/svelte'}
                         ]
                     }
                 ]
@@ -79,12 +80,11 @@ export default defineConfig({
                             {text: 'nest', link: '/backend/nest/'},
                         ]
                     }, {
-                        // text: 'Rust',
+                        // text: 'rust',
                         items: []
                     }
                 ]
             },
-            {text: '五彩世界', link: '/multicolored/', activeMatch: '/multicolored/'}
         ],
 
 
@@ -93,7 +93,7 @@ export default defineConfig({
             '/knowledge/':
                 [
                     {
-                        text: '知识点',
+                        // text: '知识点',
                         items: [
                             {text: '主题切换', link: '/knowledge/theme'},
                         ]
@@ -109,9 +109,27 @@ export default defineConfig({
                     ]
                 }
             ],
-            '/frontend/html/': [
+            // 当路径以 /rust/ 开头时显示的侧边栏
+            '/rust/': [
+                {
+                    text: '分类',
+                    items: [
+                        {text: '基础命令', link: '/rust/base.md'},
+                    ]
+                }
+            ],
+            // 当路径以 /frontend/ 开头时显示的侧边栏
+            '/frontend/base/': [
                 // {text: 'html', link: '/frontend/html/'},
-                {text: 'html标签', link: '/frontend/html/h5.md'},
+                {
+                    text: '分类',
+                    items: [
+                        {text: 'HTMl', link: '/frontend/base/html.md'},
+                        {text: 'CSS', link: '/frontend/base/css.md'},
+                        {text: 'SCSS', link: '/frontend/base/scss.md'},
+                        {text: 'JS', link: '/frontend/base/js.md'},
+                    ]
+                },
             ]
         }
         ,
@@ -122,8 +140,7 @@ export default defineConfig({
         footer:
             {
                 message: 'Released under the MIT License.',
-                copyright:
-                    'Copyright © 2026 coder s'
+                copyright: 'Copyright © 2026 硕',
             }
     }
 })

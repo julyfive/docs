@@ -3,7 +3,7 @@ title: ""
 description: "nodejs、node环境安装"
 ---
 
-# Node开发环境搭建
+# Node公司级开发环境搭建
 
 ## nvm
 
@@ -17,12 +17,6 @@ description: "nodejs、node环境安装"
 
 - nvm 安装到 `D:\Nvm\`
 - nodejs 安装到 `D:\Nvm\nodejs`
-
-nvm安装完成后查看版本：
-
-```
-nvm -v
-```
 
 查看所有可下载的node版本：
 
