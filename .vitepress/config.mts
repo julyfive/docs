@@ -135,7 +135,7 @@ export default defineConfig({
         ,
 
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/julyfive/vitepress'}
+            {icon: 'github', link: 'https://github.com/julyfive/docs'}
         ],
         footer:
             {
