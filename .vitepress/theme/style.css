@@ -144,13 +144,18 @@
 
 :root {
     /* 全局字体 */
-    --vp-font-family-base:  'Noto Sans SC', sans-serif;
+    --vp-font-family-base: 'Noto Sans SC', sans-serif;
 
     /* 代码字体 */
     --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Source Code Pro', monospace;
 }
 
-
+.VPNavBar:not(.home) {
+    background-color: var(--vp-nav-bg-color) !important;
+}
+.VPSidebar{
+    border-right: 1px solid var(--vp-c-divider);
+}
 /* 针对下拉浮层的类名进行平移 */
 .VPFlyout .menu {
     /* X轴移动 -10px, Y轴移动 0 */
@@ -161,15 +166,23 @@
     text-align: right;
 }
 
+.VPFooter {
+    background-color: transparent !important;
+}
+
 .VPDocFooter .edit-info .last-updated {
     margin-left: auto;
 }
 
+.aside-curtain{
+    background: transparent none !important;
+}
+
 /* 更改侧边栏背景颜色 - 亮色和暗黑模式 */
 :root {
-  --vp-sidebar-bg-color: #f6f6f760;
+    --vp-sidebar-bg-color: #f6f6f760;
 }
 
 .dark {
-  --vp-sidebar-bg-color: #16161860;
+    --vp-sidebar-bg-color: #16161860;
 }

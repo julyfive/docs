@@ -9,23 +9,24 @@ hero:
   image:
     src: /avatar.png  # <--- 就是這裡！
     alt: 头像
-    width: 300
-    height: 300
+    width: 260
+    height: 260
   actions:
     - theme: brand
-      text: 开始吧!
+      text: br
       target: _self
       link: /frontend/
     - theme: alt
       text: 琐碎
       link: /knowledge
+      
 
 features:
-  - title: Feature A
+  - title: ""
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
+  - title: ""
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+  - title: ""
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
