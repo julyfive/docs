@@ -48,7 +48,7 @@ export default defineConfig({
     },
     nav: [
       { text: '首页', link: '/' },
-      { text: '闲言', link: '/essay/', activeMatch: '/knowledge/' },
+      { text: '闲言', link: '/essay/', activeMatch: '/essay/' },
       { text: 'Rust', link: '/rust/', activeMatch: '/rust' },
       { text: 'Wgpu', link: '/wgpu/', activeMatch: '/wgpu/' },
       { text: 'Bevy', link: '/bevy/', activeMatch: '/bevy/' },
@@ -105,7 +105,7 @@ export default defineConfig({
           // text: '知识点',
           items: [
             { text: '常用软件下载地址', link: '/essay/downLink' },
-            { text: '主题切换', link: '/essay/theme' }
+            { text: 'node环境安装', link: '/essay/node' }
           ]
         }
       ],

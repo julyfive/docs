@@ -1,6 +1,6 @@
 # 常用软件下载地址
 
-#### Git:
+## git
 
 ```text
 官网下载地址:
@@ -10,7 +10,7 @@ https://git-scm.com/install/windows
 https://registry.npmmirror.com/binary.html?path=git-for-windows
 ```
 
-#### Nvm:
+## nvm    
 
 ```text
 github下载地址:
