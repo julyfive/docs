@@ -18,7 +18,7 @@ hero:
       link: /frontend/
     - theme: alt
       text: 琐碎
-      link: /knowledge
+      link: /essay
       
 
 features:

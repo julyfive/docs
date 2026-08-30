@@ -1,12 +1,11 @@
-import {defineConfig} from 'vitepress'
-
+import { defineConfig } from 'vitepress';
 // https://vitepress.dev/reference/site-config
+
 export default defineConfig({
   title: '無人問津 の 言',
   description: 'A VitePress Site',
   srcDir: './src',
   base: '/', // 替换为你的仓库名
-
   head: [
     // 新增 head 配置
     // 設置標籤頁圖標
@@ -25,7 +24,8 @@ export default defineConfig({
     siteTitle: '無言', // siteTitle: false,
     logo: '/avatar.png',
     outline: {
-      label: '目录'
+      label: '目录',
+      level: [2, 4] // 显示 h2~h4
     },
     // editLink: {
     //     pattern: 'https://github.com/julyfive/vitepress',
@@ -48,7 +48,7 @@ export default defineConfig({
     },
     nav: [
       { text: '首页', link: '/' },
-      { text: '琐碎', link: '/knowledge/', activeMatch: '/knowledge/' },
+      { text: '闲言', link: '/essay/', activeMatch: '/knowledge/' },
       { text: 'Rust', link: '/rust/', activeMatch: '/rust' },
       { text: 'Wgpu', link: '/wgpu/', activeMatch: '/wgpu/' },
       { text: 'Bevy', link: '/bevy/', activeMatch: '/bevy/' },
@@ -100,12 +100,12 @@ export default defineConfig({
 
     sidebar: {
       // 当路径以 /markdown开头时显示的侧边栏
-      '/knowledge/': [
+      '/essay/': [
         {
           // text: '知识点',
           items: [
-            { text: '常用软件下载地址', link: '/knowledge/downLink' },
-            { text: '主题切换', link: '/knowledge/theme' }
+            { text: '常用软件下载地址', link: '/essay/downLink' },
+            { text: '主题切换', link: '/essay/theme' }
           ]
         }
       ],
@@ -114,9 +114,12 @@ export default defineConfig({
         {
           text: '分类',
           items: [
-            { text: '基础命令', link: '/rust/base.md' },
-            { text: '数据类型', link: '/rust/data_type.md' },
-            { text: 'Trait', link: '/rust/trait.md' }
+            { text: '基础', link: '/rust/base.md' },
+            { text: '数据类型', link: '/rust/dataType.md' },
+            { text: '控制流', link: '/rust/controlFlow.md' },
+            { text: '切片', link: '/rust/slice.md' },
+            { text: '结构体', link: '/rust/struct.md' },
+            { text: '枚举', link: '/rust/enum.md' }
           ]
         }
       ],
