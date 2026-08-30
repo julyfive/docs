@@ -59,40 +59,22 @@ export default defineConfig({
         items: [
           {
             // 该部分的标题
-            // text: '基础',
-            items: [{ text: '三剑客', link: '/frontend/base/' }]
-          },
-          {
-            // 该部分的标题
-            // text: '框架',
+            text: '基础',
             items: [
-              { text: 'React', link: '/frontend/react' },
-              { text: 'Next', link: '/frontend/next' },
-              { text: 'Vue', link: '/frontend/vue' },
-              { text: 'Svelte', link: '/frontend/svelte' }
-            ]
-          }
-        ]
-      },
-      {
-        text: '后端',
-        activeMatch: '/backend/', //去掉  link: '/backend/',
-        items: [
-          {
-            // 该部分的标题
-            // text: 'Node',
-            items: [{ text: 'node', link: '/backend/node/' }]
-          },
-          {
-            // text: 'Node框架',
-            items: [
-              { text: 'express', link: '/backend/express/' },
-              { text: 'nest', link: '/backend/nest/' }
+              { text: 'html', link: '/frontend/html/' },
+              { text: 'css', link: '/frontend/css/' },
+              { text: 'js', link: '/frontend/js/' }
             ]
           },
           {
-            // text: 'rust',
-            items: []
+            // 该部分的标题
+            text: '框架',
+            items: [
+              { text: 'react', link: '/frontend/react' },
+              { text: 'next', link: '/frontend/next' },
+              { text: 'vue', link: '/frontend/vue' },
+              { text: 'svelte', link: '/frontend/svelte' }
+            ]
           }
         ]
       }
@@ -151,17 +133,61 @@ export default defineConfig({
           ]
         }
       ],
-      // 当路径以 /frontend/ 开头时显示的侧边栏
-      '/frontend/base/': [
-        // {text: 'html', link: '/frontend/html/'},
+      '/frontend/html/': [
         {
           text: '分类',
           items: [
-            { text: 'HTMl', link: '/frontend/base/html.md' },
-            { text: 'CSS', link: '/frontend/base/css.md' },
-            { text: 'SCSS', link: '/frontend/base/scss.md' },
-            { text: 'JS', link: '/frontend/base/js.md' }
+            { text: 'html', link: '/frontend/html/html' },
+            { text: 'h5', link: '/frontend/html/h5' }
           ]
+        }
+      ],
+      '/frontend/css/': [
+        {
+          text: '分类',
+          items: [
+            { text: 'css', link: '/frontend/css/css' },
+            { text: 'scss', link: '/frontend/css/scss' }
+          ]
+        }
+      ],
+      '/frontend/js/': [
+        {
+          text: '分类',
+          items: [
+            { text: 'js', link: '/frontend/js/js' },
+            { text: 'es6', link: '/frontend/js/es6' }
+          ]
+        }
+      ],
+      '/frontend/react/': [
+        {
+          text: '分类',
+          items: [
+            { text: 'react', link: '/frontend/react/react' },
+            { text: 'next', link: '/frontend/react/next' }
+          ]
+        }
+      ],
+      '/frontend/vue/': [
+        {
+          text: '分类',
+          items: [
+            { text: 'vue', link: '/frontend/vue/vue' },
+            { text: 'svelte', link: '/frontend/vue/svelte' }
+          ]
+        }
+      ],
+      '/frontend/svelte/': [
+        {
+          text: '分类',
+          items: [{ text: 'svelte', link: '/frontend/svelte/svelte' }]
+        }
+      ],
+      '/frontend/next/': [
+        {
+          text: '分类',
+          items: [{ text: 'next', link: '/frontend/next/next' }]
         }
       ]
     },
