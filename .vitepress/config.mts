@@ -99,16 +99,18 @@ export default defineConfig({
             { text: '基础', link: '/rust/base.md' },
             { text: '数据类型', link: '/rust/dataType.md' },
             { text: '控制流', link: '/rust/controlFlow.md' },
-            { text: '切片', link: '/rust/slice.md' },
-            { text: '结构体', link: '/rust/struct.md' },
-            { text: '枚举', link: '/rust/enum.md' }
+            { text: 'Slice', link: '/rust/slice.md' },
+            { text: 'Struct', link: '/rust/struct.md' },
+            { text: 'Enum', link: '/rust/enum.md' },
+            { text: '代码组织', link: '/rust/codeOrg.md' },
+            { text: 'Vector', link: '/rust/vector.md' }
           ]
         }
       ],
       // 当路径以 /wgpu/ 开头时显示的侧边栏
       '/wgpu/': [
         {
-          text: '五彩项目',
+          text: '分类',
           items: [
             { text: '项目 A', link: '/wgpu/project-a' },
             { text: '项目 B', link: '/wgpu/project-b' }
@@ -117,7 +119,7 @@ export default defineConfig({
       ],
       '/bevy/': [
         {
-          text: 'Bevy项目',
+          text: '分类',
           items: [
             { text: '项目 A', link: '/bevy/project-a' },
             { text: '项目 B', link: '/bevy/project-b' }
@@ -126,9 +128,9 @@ export default defineConfig({
       ],
       '/database/': [
         {
-          text: '数据库项目',
+          text: '分类',
           items: [
-            { text: '项目 A', link: '/database/project-a' },
+            { text: '常用命令', link: '/database/commands' },
             { text: '项目 B', link: '/database/project-b' }
           ]
         }

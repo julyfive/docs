@@ -153,9 +153,11 @@
 .VPNavBar:not(.home) {
     background-color: var(--vp-nav-bg-color) !important;
 }
-.VPSidebar{
+
+.VPSidebar {
     border-right: 1px solid var(--vp-c-divider);
 }
+
 /* 针对下拉浮层的类名进行平移 */
 .VPFlyout .menu {
     /* X轴移动 -10px, Y轴移动 0 */
@@ -174,7 +176,12 @@
     margin-left: auto;
 }
 
-.aside-curtain{
+html, body {
+    /*    预留滚动条宽度*/
+    scrollbar-gutter: stable both-edges;
+}
+
+.aside-curtain {
     background: transparent none !important;
 }
 

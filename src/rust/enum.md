@@ -1,36 +1,42 @@
-### 枚举：简单的分类
+# Enum 枚举
+
+### 定义
 
 ```rust
-enum Direction { //最基础的形式是定义一组命名的常量
-    North,
-    South,
-    East,
-    West,
-}
-
-enum Message { //带有属性的枚举
-    Quit,                       // 无数据
-    Move { x: i32, y: i32 },    // 匿名结构体
-    Write(String),              // 元组结构体
-    ChangeColor(i32, i32, i32), // 元组
+fn main() {
+    #[derive(Debug)]
+    enum Direction {
+        North,
+        South,
+        East,
+        West,
+    }
+    let direction: Direction = Direction::North;
+    println!("{:?}", direction);
 }
 ```
 
-### 标准库双雄：Option 和 Result
+### Option
 
 ```rust
+// 表示某个值存在或者不存在
 enum Option<T> {
     Some(T),
     None,
 }
+```
 
-enum Result<T, E> {
-    Ok(T),
-    Err(E),
+```rust 
+fn main() {
+    let some_num = Option::Some(5);
+    let some_str = Option::Some("hello");
+
+    //使用None时，必须标注类型
+    let absent_num: Option<i32> = None;
 }
 ```
 
-### 模式匹配
+### Match表达式
 
 * 当要使用枚举里面的值的时候，需要先进行解包
 
@@ -38,34 +44,50 @@ enum Result<T, E> {
 
 - 枚举必须穷尽！
 - 可以用`_`通配符来匹配任何情况，即忽略
-- other (或任意变量名) 你想把那些不匹配的情况收集起来，并在接下来的逻辑里用到这个值
-    - others匹配的仍然是枚举，如果要取值，需要解包
+- others (或任意变量名) 你想把那些不匹配的情况收集起来，并在接下来的逻辑里用到这个值
+
 
 ```rust
-let msg = Message::Write(String::from("hello"));
-match msg {
-    Message::Quit => {},
-    Message::Move { x, y } => {},
-    Message::Write(text) => {},
-    Message::ChangeColor(r, g, b) => {},
-    _ => {},    
-   others => {}, //移动了所有权
-   ref others => {}, //引用
-   ref mut others => {}, //可变引用
+fn main() {
+    #[derive(Debug)]
+    enum Direction {
+        North,
+        South,
+        East,
+        West,
+    }
+    let direction: Direction = Direction::West;
+    match &direction {
+        Direction::North => println!("math_north"),
+        Direction::South => println!("match_south"),
+        _ => println!("Other"),
+        // others => println!("{:?}", others),
+    };
+    print!("{:?}", direction);
 }
+
  ```
 
-### If let 语法
+### If let 
 
 ```rust
-if let Message::Write(text) = msg { //只是匹配，不进行解包
-    println!("消息内容: {}", text);
-}
-
-if let Message::Write(text) = msg {
-text
-}else{
-""
+fn main() {
+    #[derive(Debug)]
+    enum Direction {
+        North,
+        South,
+        East,
+        West,
+    }
+    let direction: Direction = Direction::West;
+    if let Direction::North = direction {
+        println!("北方");
+    } else if let Direction::South = direction {
+        println!("南方");
+    } else {
+        println!("东方或西方(其他方向)");
+    }
+    print!("{:?}", direction);
 }
 
 ```

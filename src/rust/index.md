@@ -1,6 +1,6 @@
 # Rust
 
-听说rust很能打，所以来尝尝咸淡！
+rust圣经、入rust教、得永生
 
 ### 安装Rust
 
@@ -32,6 +32,12 @@ https://google.github.io/comprehensive-rust/zh-CN/index.html
 ```
 rustup update stable    更新稳定版本
 rustup update 1.95.0    更新到指定版本
+```
+
+### 检查更新
+
+```
+rustup check
 ```
 
 ### 升级 rustup 自身
