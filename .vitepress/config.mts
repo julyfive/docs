@@ -103,7 +103,10 @@ export default defineConfig({
             { text: 'Struct', link: '/rust/struct.md' },
             { text: 'Enum', link: '/rust/enum.md' },
             { text: '代码组织', link: '/rust/codeOrg.md' },
-            { text: 'Vector', link: '/rust/vector.md' }
+            { text: 'Vector', link: '/rust/vector.md' },
+            { text: 'String', link: '/rust/string.md' },
+            { text: 'HashMap', link: '/rust/hashMap.md' },
+            { text: 'Trait', link: '/rust/trait.md' }
           ]
         }
       ],

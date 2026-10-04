@@ -7,14 +7,14 @@ description: "rust trait"
 
 Trait定义了特定类型所具有的功能，可以使用Trait以一种抽象的方式去定义共享行为
 
-## 定义Trait
+### 定义Trait
 
 ```rust
 //定义两个结构体 NewsArticle 和 Tweet  
 pub struct NewsArticle {
     pub headline: String,
     pub location: String,
-    pub author: String,
+    pub author: String, 
     pub content: String,
 }
 pub struct Tweet {
@@ -33,4 +33,7 @@ pub trait Summary {
 }
 
 ```
-## 实现Trait
+
+### 实现Trait
+
+### Trait Bounds

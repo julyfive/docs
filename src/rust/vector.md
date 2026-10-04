@@ -37,3 +37,36 @@ fn main() {
 }
 
 ```
+
+### 常用方法
+
+```rust
+Vce::new();
+vec![];
+pop();
+push();
+is_empty();
+len();
+with_capacity();
+get();
+[];
+iter();
+mut_iter()
+```
+
+### 练习
+
+```rust
+fn main() {
+    // 需求：读入一组数字，过滤掉负数，去重，排序，求和
+    let mut total: i32 = 0;
+    let mut nums = vec![3, -1, 2, -1, 5, 3];
+    nums.retain(|x| x > &0);
+    nums.sort();
+    nums.dedup();
+    for num in nums {
+        total += num;
+    }
+    println!("{:?}", total)
+}
+```
