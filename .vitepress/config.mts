@@ -106,7 +106,9 @@ export default defineConfig({
             { text: 'Vector', link: '/rust/vector.md' },
             { text: 'String', link: '/rust/string.md' },
             { text: 'HashMap', link: '/rust/hashMap.md' },
-            { text: 'Trait', link: '/rust/trait.md' }
+            { text: 'Trait', link: '/rust/trait.md' },
+            { text: '生命周期', link: '/rust/lifeTime.md' },
+            { text: '测试', link: '/rust/test.md' }
           ]
         }
       ],
