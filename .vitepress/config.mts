@@ -108,7 +108,9 @@ export default defineConfig({
             { text: 'HashMap', link: '/rust/hashMap.md' },
             { text: 'Trait', link: '/rust/trait.md' },
             { text: '生命周期', link: '/rust/lifeTime.md' },
-            { text: '测试', link: '/rust/test.md' }
+            { text: '测试', link: '/rust/test.md' },
+            { text: '闭包', link: '/rust/closure.md' },
+            { text: '迭代器', link: '/rust/iterator.md' }
           ]
         }
       ],
