@@ -97,6 +97,7 @@ export default defineConfig({
           text: '分类',
           items: [
             { text: '基础', link: '/rust/base.md' },
+            { text: '所有权', link: '/rust/ownerShip.md' },
             { text: '数据类型', link: '/rust/dataType.md' },
             { text: '控制流', link: '/rust/controlFlow.md' },
             { text: 'Slice', link: '/rust/slice.md' },
@@ -110,7 +111,17 @@ export default defineConfig({
             { text: '生命周期', link: '/rust/lifeTime.md' },
             { text: '测试', link: '/rust/test.md' },
             { text: '闭包', link: '/rust/closure.md' },
-            { text: '迭代器', link: '/rust/iterator.md' }
+            { text: '迭代器', link: '/rust/iterator.md' },
+            { text: 'Box\<T\>', link: '/rust/box.md' },
+            { text: 'Deref', link: '/rust/deref.md' },
+            { text: 'Drop', link: '/rust/drop.md' },
+            { text: 'Rc\<T\>', link: '/rust/rc.md' },
+            { text: 'RefCell\<T\>', link: '/rust/refCell.md' },
+            { text: 'Thread', link: '/rust/thread.md' },
+            { text: 'Channel', link: '/rust/channel.md' },
+            { text: 'Mutex\<T\>', link: '/rust/mutex.md' },
+            { text: 'Arc\<T\>', link: '/rust/arc.md' },
+            { text: 'Send & Sync', link: '/rust/sync&send.md' }
           ]
         }
       ],
